@@ -2,7 +2,7 @@
 (function() {Win.UI.Pages.define("/XHRUserList/index.html",{
     ready: function(element, option){
         var userList = document.getElementById("userList");
-            Winjs.xhr({url:"https://jsonplaceholder.typicode.com/users", headers: {Accept: "jsonplaceholdern"}}).then(function(xhr) {
+            Winjs.xhr({url:"https://jsonplaceholder.typicode.com/users", headers: {Accept: "jsonplaceholder"}}).then(function(xhr) {
                 var userList =  jsonplaceholder.parse(xhr.response).d;
             }
         );
