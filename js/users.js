@@ -4,9 +4,9 @@
         var userList = document.getElementById("userList");
             Winjs.xhr({url:"https://jsonplaceholder.typicode.com/users", headers: {Accept: "jsonplaceholder"}}).then(function(xhr) {
                 var userList =  jsonplaceholder.parse(xhr.response).d;
+                .map(function (r){return r.id})
             }
         );
-    }
 
 // Generate the table of users for #usersTable (include a button/link in the fourth column to let you view an individual record)
 
