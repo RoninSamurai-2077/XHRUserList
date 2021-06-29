@@ -32,14 +32,23 @@ function getEl(id) {
 
 
 // Generate the table of users for #usersTable (include a button/link in the fourth column to let you view an individual record)
-//if(event.target.nodeName == 'BUTTON') {}
+//if(event.target.nodeName == 'BUTTON') {console.log(event.target.id); let getId = event.target.id;
+
+let secondXhr = new XMLHttpRequest(); 
+let userView = []
+secondXhr.onload = function(){
+    userView = JSON.parse(secondXhr.responseText); 
+    let populate = `<p>${userView}</p>`
+    document.getElementById('userView').innerHTML += populate;
+};
+    console.log(userView)
+    secondXhr.open( 'GET', 'https://jsonplaceholder.typicode.com/users/', true); 
+    secondXhr.send();
     // for(let i = 0; i< userView.length; i++){
     //     let userAddress = userInfo[i].address;
     //     let userPhone = userInfo[1].phone;
     //     let userCompany = userInfo[1].company;
     //     let userWedsite = userInfo[1].website;
 
-// xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); 
-// xhr.send();
 // If a button/link in the table is clickyed, populate #userView with the full details of theS user.
 // (bonus points if you make it a nice form as if the user was editable)
