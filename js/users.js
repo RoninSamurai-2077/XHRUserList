@@ -23,19 +23,9 @@ function getEl(id) {
 
 
         window.addEventListener('DOMContentLoaded', (event) => {
-            console.log('DOM fully loaded and parsed');
-        });
-        
-        function dom () {
+            getEl('userList').addEventListener('click');
             console.log(event.target.parentNode.parentNode.children [0].innerText); 
-            }
-            
-            if (document.readyState === "loading") {
-                getEl('userList').addEventListener('click', dom);
-            } else {
-            dom();
-            }
-            
+        });
 if(event.target.nodeName == 'BUTTON') {
 
     }
@@ -44,6 +34,18 @@ if(event.target.nodeName == 'BUTTON') {
 
 
 // Generate the table of users for #usersTable (include a button/link in the fourth column to let you view an individual record)
+// let userView = [];
+//     const xhr = new XMLHttpRequest();
+//     xhr.onload = function(){
+//         userView = JSON.parse(xhr.response);
+//             console.log (userView);
+//     for(let i = 0; i< userView.length; i++){
+//         let userAddress = userInfo[i].address;
+//         let userPhone = userInfo[1].phone;
+//         let userCompany = userInfo[1].company;
+//         let userWedsite = userInfo[1].website;
 
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); 
+// xhr.send();
 // If a button/link in the table is clickyed, populate #userView with the full details of theS user.
 // (bonus points if you make it a nice form as if the user was editable)
