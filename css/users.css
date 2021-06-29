@@ -17,13 +17,14 @@ h1,h2,h3,h4,h5,h6 {
 #users {
 	padding: 5px;
 	border: 1px solid red;
-	width: 45%;
+	width: 50%;
 }
 
 #userView {
 	border: 1px solid green;
 	width: 45%;
 }
+Using XHR to load data from a remote API
 
 .flex {
 	display: flex;

@@ -15,7 +15,7 @@ function getEl(id) {
         
         let populate=`<tr><td>${userId}</td> <td>${userName}</td> <td>${userEmail}</td> <td><button type='button'>View</button></td></tr>`;
 
-    getEl('userList').innerHTML + populate;
+    getEl('userList').innerHTML += populate;
     }
 }
         xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); 
