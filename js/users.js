@@ -22,7 +22,10 @@ function getEl(id) {
         xhr.send();
 
 
-
+        window.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM fully loaded and parsed');
+        });
+        
         function dom () {
             console.log(event.target.parentNode.parentNode.children [0].innerText); 
             }
