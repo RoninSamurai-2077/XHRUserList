@@ -21,12 +21,21 @@ function getEl(id) {
         xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); 
         xhr.send();
 
-getEl('userList').addEventListener('click', function(event){
-    console.log(event.target.parentNode.parentNode.children [0].innerText); 
+
+
+        function dom () {
+            console.log(event.target.parentNode.parentNode.children [0].innerText); 
+            }
+            
+            if (document.readyState === "loading") {
+                getEl('userList').addEventListener('click', dom);
+            } else {
+            dom();
+            }
+            
 if(event.target.nodeName == 'BUTTON') {
 
     }
-});
 
 
 
