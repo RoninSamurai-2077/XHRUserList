@@ -34,16 +34,16 @@ function getEl(id) {
 // Generate the table of users for #usersTable (include a button/link in the fourth column to let you view an individual record)
 //if(event.target.nodeName == 'BUTTON') {console.log(event.target.id); let getId = event.target.id;
 
-let secondXhr = new XMLHttpRequest(); 
+let viewXhr = new XMLHttpRequest(); 
 let userView = []
-secondXhr.onload = function(){
+viewXhr.onload = function(){
     userView = JSON.parse(secondXhr.responseText); 
     let populate = `<p>${userView}</p>`
     document.getElementById('userView').innerHTML += populate;
 };
     console.log(userView)
-    secondXhr.open( 'GET', 'https://jsonplaceholder.typicode.com/users/', true); 
-    secondXhr.send();
+    viewXhr.open( 'GET', 'https://jsonplaceholder.typicode.com/users/', true); 
+    viewXhr.send();
     // for(let i = 0; i< userView.length; i++){
     //     let userAddress = userInfo[i].address;
     //     let userPhone = userInfo[1].phone;
