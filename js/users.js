@@ -10,26 +10,21 @@ function getEl(id) {
 
     for(let i = 0; i< userInfo.length; i++){
         let userId = userInfo[i].id;
-        let userName userInfo[1].names;
-        let userEmail userInfo[1].emails;
+        let userName userInfo[1].name;
+        let userEmail userInfo[1].email;
         
-        let populate=`<tr><td>${userId}</td> <td>${userliane}</td> <td>${userEmail}</td> <td><button type='button'>View</button></td></tr>`;
+        let populate=`<tr><td>${userId}</td> <td>${userName}</td> <td>${userEmail}</td> <td><button type='button'>View</button></td></tr>`;
 
             getEl('userList').innerHTML + populate;
 
-         xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); xhr.send();
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); 
+        xhr.send();
 
-getEl('userList').addEventListener('click", function(event){
+getEl('userList').addEventListener('click', function(event){
 
-console.log(event.target.parentNode.parentNode.children [0].innerText); if(event.target.nodeName 'BUTTON'>
+console.log(event.target.parentNode.parentNode.children [0].innerText); if(event.target.nodeName == 'BUTTON')
     }
 }
-            xhr.open('get', 'https://jsonplaceholder.typicode.com/users');
-        xhr.sent();
-
-        getEl('userList').addEventListener('click', function(event){
-            console.log()
-        }
 
 // Generate the table of users for #usersTable (include a button/link in the fourth column to let you view an individual record)
 
