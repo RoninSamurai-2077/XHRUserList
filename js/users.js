@@ -26,24 +26,18 @@ function getEl(id) {
             getEl('userList').addEventListener('click');
             console.log(event.target.parentNode.parentNode.children [0].innerText); 
         });
-if(event.target.nodeName == 'BUTTON') {
 
-    }
 
 
 
 
 // Generate the table of users for #usersTable (include a button/link in the fourth column to let you view an individual record)
-// let userView = [];
-//     const xhr = new XMLHttpRequest();
-//     xhr.onload = function(){
-//         userView = JSON.parse(xhr.response);
-//             console.log (userView);
-//     for(let i = 0; i< userView.length; i++){
-//         let userAddress = userInfo[i].address;
-//         let userPhone = userInfo[1].phone;
-//         let userCompany = userInfo[1].company;
-//         let userWedsite = userInfo[1].website;
+//if(event.target.nodeName == 'BUTTON') {}
+    // for(let i = 0; i< userView.length; i++){
+    //     let userAddress = userInfo[i].address;
+    //     let userPhone = userInfo[1].phone;
+    //     let userCompany = userInfo[1].company;
+    //     let userWedsite = userInfo[1].website;
 
 // xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); 
 // xhr.send();
