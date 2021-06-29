@@ -37,7 +37,7 @@ function getEl(id) {
 let viewXhr = new XMLHttpRequest(); 
 let userView = []
 viewXhr.onload = function(){
-    userView = JSON.parse(secondXhr.responseText); 
+    userView = JSON.parse(viewXhr.responseText); 
     let populate = `<p>${userView}</p>`
     document.getElementById('userView').innerHTML += populate;
 };
