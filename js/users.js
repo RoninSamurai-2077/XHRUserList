@@ -1,17 +1,35 @@
 // On page load, pull the users endpoint from https://jsonplaceholder.typicode.com/users using XHR
-// (function() {Win.UI.Pages.define("/XHRUserList/index.html",{
-//     ready: function(element, option){
-    const xhr = XMLHttpRequest;
-        console.log(this);
-    
-        var userList = document.getElementById("userList");
-        // Winjs.xhr({url:'https://jsonplaceholder.typicode.com/users', headers: {Accept: "jsonplaceholder"}}).then(function(xhr) {
-        //         var userList =  jsonplaceholder.parse(xhr.response).d;
-        // //         .map(function (r){return r.id})
-        //     }
-        // );
-        xhr.open('get', 'https://jsonplaceholder.typicode.com/users');
+function getEl(id) {
+    return document.getElementById(id);
+}
+    let userInfo = [];
+    const xhr = new XMLHttpRequest();
+    xhr.onload = function(){
+        userInfo = JSON.parse(this.responseText);
+            console.log (userInfo);
+
+    for(let i = 0; i< userInfo.length; i++){
+        let userId = userInfo[i].id;
+        let userName userInfo[1].names;
+        let userEmail userInfo[1].emails;
+        
+        let populate=`<tr><td>${userId}</td> <td>${userliane}</td> <td>${userEmail}</td> <td><button type='button'>View</button></td></tr>`;
+
+            getEl('userList').innerHTML + populate;
+
+         xhr.open('GET', 'https://jsonplaceholder.typicode.com/users' ); xhr.send();
+
+getEl('userList').addEventListener('click", function(event){
+
+console.log(event.target.parentNode.parentNode.children [0].innerText); if(event.target.nodeName 'BUTTON'>
+    }
+}
+            xhr.open('get', 'https://jsonplaceholder.typicode.com/users');
         xhr.sent();
+
+        getEl('userList').addEventListener('click', function(event){
+            console.log()
+        }
 
 // Generate the table of users for #usersTable (include a button/link in the fourth column to let you view an individual record)
 
